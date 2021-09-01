@@ -5,10 +5,10 @@ import whatIsCircular from '@cypress/what-is-circular'
 import UrlParse from 'url-parse'
 import Promise from 'bluebird'
 
-import $utils from '../../cypress2/utils'
-import $errUtils from '../../cypress2/error_utils'
-import $Log from '../../cypress2/log'
-import { $Location } from '../../cypress2/location'
+import $utils from '../../cypress/utils'
+import $errUtils from '../../cypress/error_utils'
+import $Log from '../../cypress/log'
+import { $Location } from '../../cypress/location'
 
 import debugFn from 'debug'
 const debug = debugFn('cypress:driver:navigation')

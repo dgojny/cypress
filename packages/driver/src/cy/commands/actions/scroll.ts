@@ -3,8 +3,8 @@ import $ from 'jquery'
 import Promise from 'bluebird'
 
 import $dom from '../../../dom'
-import $utils from '../../../cypress2/utils'
-import $errUtils from '../../../cypress2/error_utils'
+import $utils from '../../../cypress/utils'
+import $errUtils from '../../../cypress/error_utils'
 
 const findScrollableParent = ($el, win) => {
   const $parent = $dom.getParent($el)

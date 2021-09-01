@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 import $dom from '../dom'
-import $utils from '../cypress2/utils'
+import $utils from '../cypress/utils'
 
 const remoteJQueryisNotSameAsGlobal = (remoteJQuery) => {
   return remoteJQuery && (remoteJQuery !== $)

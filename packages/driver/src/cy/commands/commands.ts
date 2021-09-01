@@ -2,8 +2,8 @@
 
 import _ from 'lodash'
 
-import { $Chainer } from '../../cypress2/chainer'
-import $errUtils from '../../cypress2/error_utils'
+import { $Chainer } from '../../cypress/chainer'
+import $errUtils from '../../cypress/error_utils'
 
 const command = function (ctx, name, ...args) {
   if (!ctx[name]) {

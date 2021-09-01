@@ -3,7 +3,7 @@
 import _ from 'lodash'
 import Promise from 'bluebird'
 
-import $errUtils from '../../cypress2/error_utils'
+import $errUtils from '../../cypress/error_utils'
 
 const clone = (obj) => {
   return JSON.parse(JSON.stringify(obj))

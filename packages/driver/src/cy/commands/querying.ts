@@ -1,11 +1,11 @@
 import _ from 'lodash'
 import Promise from 'bluebird'
 
-import { $Command } from '../../cypress2/command'
+import { $Command } from '../../cypress/command'
 import $dom from '../../dom'
 import $elements from '../../dom/elements'
-import $errUtils from '../../cypress2/error_utils'
-import { resolveShadowDomInclusion } from '../../cypress2/shadow_dom_utils'
+import $errUtils from '../../cypress/error_utils'
+import { resolveShadowDomInclusion } from '../../cypress/shadow_dom_utils'
 import { getAliasedRequests, isDynamicAliasingPossible } from '../net-stubbing/aliasing'
 
 export default (Commands, Cypress, cy, state) => {

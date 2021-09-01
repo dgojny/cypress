@@ -4,8 +4,8 @@ import _ from 'lodash'
 import Promise from 'bluebird'
 
 import $dom from '../../dom'
-import $utils from '../../cypress2/utils'
-import $errUtils from '../../cypress2/error_utils'
+import $utils from '../../cypress/utils'
+import $errUtils from '../../cypress/error_utils'
 
 const returnFalseIfThenable = (key, ...args) => {
   if ((key === 'then') && _.isFunction(args[0]) && _.isFunction(args[1])) {

@@ -2,7 +2,7 @@ import _ from 'lodash'
 import md5 from 'md5'
 import path from 'path'
 import url from 'url'
-import $utils from '../cypress2/utils'
+import $utils from '../cypress/utils'
 import LimitedMap from '../util/limited_map'
 
 const anyUrlInCssRe = /url\((['"])([^'"]*)\1\)/gm

@@ -1,6 +1,6 @@
 import _ from 'lodash'
 
-import $errUtils from '../cypress2/error_utils'
+import $errUtils from '../cypress/error_utils'
 
 const aliasRe = /^@.+/
 const aliasDisplayRe = /^([@]+)/

@@ -4,7 +4,7 @@ import _ from 'lodash'
 import Promise from 'bluebird'
 
 import $dom from '../../dom'
-import $errUtils from '../../cypress2/error_utils'
+import $errUtils from '../../cypress/error_utils'
 
 const reExistence = /exist/
 const reHaveLength = /length/

@@ -5,7 +5,7 @@ import $jquery from '../jquery'
 import { getTagName } from './elementHelpers'
 import { isWithinShadowRoot, getShadowElementFromPoint } from './shadow'
 import { normalizeWhitespaces } from './utils'
-import $utils from '../../cypress2/utils'
+import $utils from '../../cypress/utils'
 
 /**
  * Find Parents relative to an initial element

@@ -166,7 +166,7 @@ export default {
       // is always in focus
       const $focused = getFocused()
 
-      if ((!$focused || $focused[0] !== el) && $elements.isW3CFocusable(el)) {
+      if ((!$focused || $focused[0] !== el) && $dom.isW3CFocusable(el)) {
         fireFocus(el, opts)
 
         return

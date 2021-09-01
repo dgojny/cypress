@@ -2,11 +2,11 @@
 import _ from 'lodash'
 import Promise from 'bluebird'
 
-import $utils from '../../cypress2/utils'
-import $errUtils from '../../cypress2/error_utils'
-import $stackUtils from '../../cypress2/stack_utils'
-import $Server from '../../cypress2/server'
-import { $Location } from '../../cypress2/location'
+import $utils from '../../cypress/utils'
+import $errUtils from '../../cypress/error_utils'
+import $stackUtils from '../../cypress/stack_utils'
+import $Server from '../../cypress/server'
+import { $Location } from '../../cypress/location'
 
 let server = null
 

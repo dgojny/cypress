@@ -1,5 +1,5 @@
-import { $Location } from '../cypress2/location'
-import $utils from '../cypress2/utils'
+import { $Location } from '../cypress/location'
+import $utils from '../cypress/utils'
 
 export default {
   create: (state) => {

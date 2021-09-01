@@ -25,8 +25,8 @@ import {
   getRouteMatcherLogConfig,
 } from './route-matcher-log'
 import { registerEvents } from './events'
-import $errUtils from '../../cypress2/error_utils'
-import $utils from '../../cypress2/utils'
+import $errUtils from '../../cypress/error_utils'
+import $utils from '../../cypress/utils'
 import isValidDomain from 'is-valid-domain'
 import isValidHostname from 'is-valid-hostname'
 

@@ -538,5 +538,5 @@ export const getReasonIsHidden = function ($el, options = { checkOpacity: true }
 /* eslint-enable no-cond-assign */
 
 export default {
-  isVisible, isHidden, getReasonIsHidden, parentHasDisplayNone,
+  isVisible, isHidden, getReasonIsHidden, parentHasDisplayNone, isW3CFocusable, isW3CRendered,
 }

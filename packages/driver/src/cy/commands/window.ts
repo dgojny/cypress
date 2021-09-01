@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import Promise from 'bluebird'
 
-import $errUtils from '../../cypress2/error_utils'
+import $errUtils from '../../cypress/error_utils'
 
 const viewports = {
   'macbook-16': '1536x960',

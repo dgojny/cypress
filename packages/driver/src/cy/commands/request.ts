@@ -2,9 +2,9 @@ import _ from 'lodash'
 import whatIsCircular from '@cypress/what-is-circular'
 import Promise from 'bluebird'
 
-import $utils from '../../cypress2/utils'
-import $errUtils from '../../cypress2/error_utils'
-import { $Location } from '../../cypress2/location'
+import $utils from '../../cypress/utils'
+import $errUtils from '../../cypress/error_utils'
+import { $Location } from '../../cypress/location'
 
 const isOptional = (memo, val, key) => {
   if (_.isNull(val)) {

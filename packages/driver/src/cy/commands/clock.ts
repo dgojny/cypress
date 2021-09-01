@@ -2,8 +2,8 @@
 
 import _ from 'lodash'
 
-import * as $Clock from '../../cypress2/clock'
-import $errUtils from '../../cypress2/error_utils'
+import * as $Clock from '../../cypress/clock'
+import $errUtils from '../../cypress/error_utils'
 
 // create a global clock
 let clock = null

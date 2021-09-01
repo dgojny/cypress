@@ -8,10 +8,10 @@ import chai from 'chai'
 import sinonChai from '@cypress/sinon-chai'
 
 import $dom from '../dom'
-import $utils from '../cypress2/utils'
-import $errUtils from '../cypress2/error_utils'
-import $stackUtils from '../cypress2/stack_utils'
-import $chaiJquery from '../cypress2/chai_jquery'
+import $utils from '../cypress/utils'
+import $errUtils from '../cypress/error_utils'
+import $stackUtils from '../cypress/stack_utils'
+import $chaiJquery from '../cypress/chai_jquery'
 import * as chaiInspect from './chai/inspect'
 
 // all words between single quotes

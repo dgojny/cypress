@@ -2,13 +2,15 @@ import _ from 'lodash'
 import React from 'react'
 import { mount, shallow } from 'enzyme'
 import sinon from 'sinon'
-import driver from '@packages/driver'
+import $Cypress from '@packages/driver'
 import Tooltip from '@cypress/react-tooltip'
 
 import { eventManager } from '../event-manager'
 import { Studio, studioRecorder } from '../studio'
 import { selectorPlaygroundModel } from '../selector-playground'
 import { Header } from '.'
+
+const $ = $Cypress.$
 
 const getState = (props) => _.extend({
   defaults: {},
@@ -24,7 +26,7 @@ const propsWithState = (stateProps, configProps = {}) =>
 
 describe('<Header />', () => {
   beforeEach(() => {
-    driver.$.returns({ outerHeight: () => 42 })
+    $.returns({ outerHeight: () => 42 })
 
     sinon.stub(eventManager, 'emit')
 

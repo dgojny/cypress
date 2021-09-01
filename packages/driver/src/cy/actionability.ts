@@ -6,7 +6,7 @@ import Promise from 'bluebird'
 import debugFn from 'debug'
 import $dom from '../dom'
 import $elements from '../dom/elements'
-import $errUtils from '../cypress2/error_utils'
+import $errUtils from '../cypress/error_utils'
 const debug = debugFn('cypress:driver:actionability')
 
 const delay = 50

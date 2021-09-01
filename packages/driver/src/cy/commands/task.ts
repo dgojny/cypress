@@ -1,9 +1,9 @@
 import _ from 'lodash'
 import Promise from 'bluebird'
 
-import $utils from '../../cypress2/utils'
-import $errUtils from '../../cypress2/error_utils'
-import $stackUtils from '../../cypress2/stack_utils'
+import $utils from '../../cypress/utils'
+import $errUtils from '../../cypress/error_utils'
+import $stackUtils from '../../cypress/stack_utils'
 
 export default (Commands, Cypress, cy) => {
   Commands.addAll({

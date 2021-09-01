@@ -9,8 +9,8 @@ import $visibility from './visibility'
 const { isWindow, getWindowByElement } = $window
 const { isDocument, getDocumentFromElement } = $document
 const { wrap, unwrap, isJquery, query } = $jquery
-const { isVisible, isHidden, getReasonIsHidden } = $visibility
-const { isInputType, isFocusable, isElement, isScrollable, isFocused, stringify, getElements, getContainsSelector, getFirstDeepestElement, isDetached, isAttached, isTextLike, isSelector, isDescendent, getFirstFixedOrStickyPositionParent, getFirstStickyPositionParent, getFirstScrollableParent, isUndefinedOrHTMLBodyDoc, elementFromPoint, getParent, findAllShadowRoots, findShadowRoots, isWithinShadowRoot, getHostContenteditable } = $elements
+const { isVisible, isHidden, getReasonIsHidden, isW3CRendered, isW3CFocusable } = $visibility
+const { isInputType, isFocusable, isElement, isScrollable, isFocused, stringify, getElements, getContainsSelector, getFirstDeepestElement, isDetached, isAttached, isTextLike, isSelector, isDescendent, getFirstFixedOrStickyPositionParent, getFirstStickyPositionParent, getFirstScrollableParent, isUndefinedOrHTMLBodyDoc, elementFromPoint, getParent, findAllShadowRoots, isWithinShadowRoot, getHostContenteditable } = $elements
 const { getCoordsByPosition, getElementPositioning, getElementCoordinatesByPosition, getElementAtPointFromViewport, getElementCoordinatesByPositionRelativeToXY } = $coordinates
 const { getSelectionBounds } = $selection
 
@@ -25,6 +25,8 @@ const isDom = (obj) => {
 // can be tucked away behind these interfaces.
 export default {
   wrap,
+  isW3CFocusable,
+  isW3CRendered,
   query,
   unwrap,
   elementFromPoint,
@@ -47,7 +49,6 @@ export default {
   isJquery,
   stringify,
   findAllShadowRoots,
-  findShadowRoots,
   isWithinShadowRoot,
   getElements,
   getContainsSelector,

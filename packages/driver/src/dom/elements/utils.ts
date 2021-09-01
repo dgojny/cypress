@@ -1,7 +1,7 @@
 import $ from 'jquery'
 import _ from 'lodash'
 import $jquery from '../jquery'
-import $utils from '../../cypress2/utils'
+import $utils from '../../cypress/utils'
 import $window from '../window'
 import $document from '../document'
 

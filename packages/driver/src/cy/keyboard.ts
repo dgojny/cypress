@@ -2,15 +2,15 @@ import Promise from 'bluebird'
 import Debug from 'debug'
 import _ from 'lodash'
 import dayjs from 'dayjs'
-import $errUtils from '../cypress2/error_utils'
-import { USKeyboard } from '../cypress2/UsKeyboardLayout'
+import $errUtils from '../cypress/error_utils'
+import { USKeyboard } from '../cypress/UsKeyboardLayout'
 import $dom from '../dom'
 import $document from '../dom/document'
 import $elements from '../dom/elements'
 // eslint-disable-next-line no-duplicate-imports
 import type { HTMLTextLikeElement } from '../dom/elements'
 import $selection from '../dom/selection'
-import $utils from '../cypress2/utils'
+import $utils from '../cypress/utils'
 import $window from '../dom/window'
 
 const debug = Debug('cypress:driver:keyboard')
