@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import _ from 'lodash'
 import $jquery from './jquery'
 import $document from './document'
@@ -7,7 +5,7 @@ import $elements from './elements'
 import $coordinates from './coordinates'
 import * as $transform from './transform'
 
-const { isElement, isBody, isHTML, isOption, isOptgroup, getParent, getFirstParentWithTagName, isAncestor, isChild, getAllParents, isDescendent, isUndefinedOrHTMLBodyDoc, elOrAncestorIsFixedOrSticky, isFocusable, stringify: stringifyElement } = $elements
+const { isElement, isBody, isHTML, isOption, isOptgroup, getParent, getFirstParentWithTagName, isAncestor, isChild, getAllParents, isDescendent, isUndefinedOrHTMLBodyDoc, elOrAncestorIsFixedOrSticky, isDetached, isFocusable, stringify: stringifyElement } = $elements
 
 const fixedOrAbsoluteRe = /(fixed|absolute)/
 
@@ -233,6 +231,7 @@ export const isW3CFocusable = (el) => {
   return isFocusable(wrap(el)) && isW3CRendered(el)
 }
 
+// @ts-ignore
 const elAtCenterPoint = function ($el) {
   const doc = $document.getDocumentFromElement($el.get(0))
   const elProps = $coordinates.getElementPositioning($el)
@@ -538,5 +537,5 @@ export const getReasonIsHidden = function ($el, options = { checkOpacity: true }
 /* eslint-enable no-cond-assign */
 
 export default {
-  isVisible, isHidden, getReasonIsHidden, parentHasDisplayNone, isW3CFocusable, isW3CRendered,
+  isVisible, isHidden, getReasonIsHidden, isW3CFocusable, isW3CRendered,
 }

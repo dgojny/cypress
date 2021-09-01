@@ -1,4 +1,4 @@
-import $elements from '@packages/driver/src/dom/elements'
+import $elements from '../../../src/dom/elements'
 const { getActiveElByDocument, isFocused, elementFromPoint } = $elements
 const { $ } = window.$Cypress.$
 
