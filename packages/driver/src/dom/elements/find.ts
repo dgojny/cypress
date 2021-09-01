@@ -1,11 +1,11 @@
 import _ from 'lodash'
 import $ from 'jquery'
-import * as $document from '../document'
+import $document from '../document'
 import $jquery from '../jquery'
 import { getTagName } from './elementHelpers'
 import { isWithinShadowRoot, getShadowElementFromPoint } from './shadow'
 import { normalizeWhitespaces } from './utils'
-import $utils from '../../cypress/utils'
+import $utils from '../../cypress2/utils'
 
 /**
  * Find Parents relative to an initial element

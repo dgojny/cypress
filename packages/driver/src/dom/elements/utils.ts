@@ -1,9 +1,9 @@
 import $ from 'jquery'
 import _ from 'lodash'
 import $jquery from '../jquery'
-import $utils from '../../cypress/utils'
+import $utils from '../../cypress2/utils'
 import $window from '../window'
-import * as $document from '../document'
+import $document from '../document'
 
 const whitespaces = /\s+/g
 
