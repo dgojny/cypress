@@ -26,6 +26,10 @@ export default (Commands, Cypress, cy) => {
 
       const resolveHref = () => {
         return Promise.try(getHref).then((href) => {
+          if (options.decode) {
+            href = decodeURI(href)
+          }
+
           return cy.verifyUpcomingAssertions(href, options, {
             onRetry: resolveHref,
           })
