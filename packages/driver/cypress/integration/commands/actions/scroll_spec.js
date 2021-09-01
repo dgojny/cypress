@@ -1,5 +1,5 @@
-const { $ } = Cypress.$Cypress
-const { _ } = Cypress
+import $ from 'jquery'
+import _ from 'lodash'
 
 describe('src/cy/commands/actions/scroll', () => {
   before(() => {
