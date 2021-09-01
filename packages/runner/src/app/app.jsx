@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { findDOMNode } from 'react-dom'
 import { Reporter } from '@packages/reporter'
-import $Cypress from '@packages/driver'
+import $ from 'jquery'
 import {
   Message,
   errorMessages,
@@ -19,8 +19,6 @@ import util from '../lib/util'
 
 import Iframes from '../iframe/iframes'
 import Resizer from './resizer'
-
-const $ = $Cypress.$
 
 /**
  * This is a feature flag. If true, all the integration specs
