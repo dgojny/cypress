@@ -1,6 +1,6 @@
 import $elements from '../../../src/dom/elements'
 const { getActiveElByDocument, isFocused, elementFromPoint } = $elements
-const { $ } = window.$Cypress.$
+const $ = window.Cypress.$
 
 describe('src/dom/elements', () => {
   context('.isAttached', () => {
