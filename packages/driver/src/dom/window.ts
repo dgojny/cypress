@@ -3,20 +3,6 @@
 import $jquery from './jquery'
 import $document from './document'
 
-/**
- * @param {HTMLElement} el
- * @returns {Window & typeof globalThis}
- */
-const getWindowByElement = function (el) {
-  if (isWindow(el)) {
-    return el
-  }
-
-  const doc = $document.getDocumentFromElement(el)
-
-  return getWindowByDocument(doc)
-}
-
 const getWindowByDocument = (doc) => {
   // parentWindow for IE
   return doc.defaultView || doc.parentWindow
@@ -32,6 +18,20 @@ const isWindow = function (obj) {
   } catch (error) {
     return false
   }
+}
+
+/**
+ * @param {HTMLElement} el
+ * @returns {Window & typeof globalThis}
+ */
+const getWindowByElement = function (el) {
+  if (isWindow(el)) {
+    return el
+  }
+
+  const doc = $document.getDocumentFromElement(el)
+
+  return getWindowByDocument(doc)
 }
 
 export default {

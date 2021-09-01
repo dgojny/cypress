@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import $window from './window'
 import $elements from './elements'
+import $jquery from './jquery'
 
 const getElementAtPointFromViewport = (doc, x, y) => {
   return $elements.elementFromPoint(doc, x, y)
@@ -22,12 +23,12 @@ const getFirstValidSizedRect = (el) => {
 }
 
 /**
- * @param {JQuery<HTMLElement>} $el
+ * @param {JQuery<HTMLElement> | HTMLElement} $el
  */
 const getElementPositioning = ($el) => {
   let autFrame
 
-  const el = $el[0]
+  const el = $jquery.isJquery($el) ? $el[0] : $el
 
   const win = $window.getWindowByElement(el)
 
