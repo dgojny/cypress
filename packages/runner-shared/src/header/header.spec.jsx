@@ -8,9 +8,8 @@ import Tooltip from '@cypress/react-tooltip'
 import { eventManager } from '../event-manager'
 import { Studio, studioRecorder } from '../studio'
 import { selectorPlaygroundModel } from '../selector-playground'
+import $ from 'jquery'
 import { Header } from '.'
-
-const $ = $Cypress.$
 
 const getState = (props) => _.extend({
   defaults: {},
