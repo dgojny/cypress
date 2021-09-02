@@ -1,5 +1,5 @@
-import $ from 'jquery'
-import _ from 'lodash'
+const { $ } = window.Cypress.$Cypress
+const { _ } = window.Cypress
 
 describe('src/cy/commands/actions/scroll', () => {
   before(() => {

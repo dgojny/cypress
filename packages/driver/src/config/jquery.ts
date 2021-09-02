@@ -3,8 +3,7 @@
 import $ from 'jquery'
 import _ from 'lodash'
 
-import 'jquery.scrollto'
-
+import { scrollTo } from './jquery.scrollto'
 import $dom from '../dom'
 
 // force jquery to have the same visible
@@ -55,6 +54,8 @@ $.find.matchesSelector = function (elem, expr) {
     },
   })
 }
+
+$.fn.scrollTo = scrollTo
 
 // see difference between 'filters' and 'pseudos'
 // https://api.jquery.com/filter/ and https://api.jquery.com/category/selectors/

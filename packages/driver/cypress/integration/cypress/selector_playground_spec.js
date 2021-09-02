@@ -1,4 +1,4 @@
-import $ from 'jquery'
+const { $ } = window.Cypress.$Cypress
 const SelectorPlayground = Cypress.SelectorPlayground
 
 const SELECTOR_DEFAULTS = [
