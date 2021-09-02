@@ -466,7 +466,7 @@ export default {
 
       err = $errUtils.enhanceStack({
         err,
-        userInvocationStack: $stackUtils.getUserInvocationStack(err, state),
+        userInvocationStack: $errUtils.getUserInvocationStack(err, state),
         projectRoot: config('projectRoot'),
       })
 

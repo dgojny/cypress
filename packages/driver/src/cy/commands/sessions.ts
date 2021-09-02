@@ -703,7 +703,7 @@ export default function (Commands, Cypress, cy) {
 
           err = $errUtils.enhanceStack({
             err,
-            userInvocationStack: $stackUtils.getUserInvocationStack(err, Cypress.state),
+            userInvocationStack: $errUtils.getUserInvocationStack(err, Cypress.state),
             projectRoot: Cypress.config('projectRoot'),
           })
 
