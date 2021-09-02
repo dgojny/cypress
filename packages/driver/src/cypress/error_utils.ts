@@ -121,6 +121,43 @@ const stackWithReplacedProps = (err, props) => {
   return originalStack.replace(originalName, `${name}: ${message}`)
 }
 
+const getUserInvocationStack = (err, state) => {
+  const current = state('current')
+
+  const currentAssertionCommand = current?.get('currentAssertionCommand')
+  const withInvocationStack = currentAssertionCommand || current
+  // user assertion errors (expect().to, etc) get their invocation stack
+  // attached to the error thrown from chai
+  // command errors and command assertion errors (default assertion or cy.should)
+  // have the invocation stack attached to the current command
+  // prefer err.userInvocation stack if it's been set
+  let userInvocationStack = getUserInvocationStackFromError(err) || state('currentAssertionUserInvocationStack')
+
+  // if there is no user invocation stack from an assertion or it is the default
+  // assertion, meaning it came from a command (e.g. cy.get), prefer the
+  // command's user invocation stack so the code frame points to the command.
+  // `should` callbacks are tricky because the `currentAssertionUserInvocationStack`
+  // points to the `cy.should`, but the error came from inside the callback,
+  // so we need to prefer that.
+  if (
+    !userInvocationStack
+    || err.isDefaultAssertionErr
+    || (currentAssertionCommand && !current?.get('followedByShouldCallback'))
+  ) {
+    userInvocationStack = withInvocationStack?.get('userInvocationStack')
+  }
+
+  if (!userInvocationStack) return
+
+  if (
+    isCypressErr(err)
+    || isAssertionErr(err)
+    || isChaiValidationErr(err)
+  ) {
+    return userInvocationStack
+  }
+}
+
 const modifyErrMsg = (err, newErrMsg, cb) => {
   err.stack = $stackUtils.normalizedStack(err)
 
@@ -509,6 +546,7 @@ export default {
   enhanceStack,
   errByPath,
   errorFromUncaughtEvent,
+  getUserInvocationStack,
   getUserInvocationStackFromError,
   isAssertionErr,
   isChaiValidationErr,
