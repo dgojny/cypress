@@ -4,15 +4,12 @@ import { action, computed, observable } from 'mobx'
 import { observer } from 'mobx-react'
 import React, { Component, createRef } from 'react'
 import Tooltip from '@cypress/react-tooltip'
-import $Cypress from '@packages/driver'
-
+import $ from 'jquery'
 import { ViewportInfo } from '../viewport-info'
 import { SelectorPlayground } from '../selector-playground/SelectorPlayground'
 import { selectorPlaygroundModel } from '../selector-playground'
 import { Studio, studioRecorder } from '../studio'
 import { eventManager } from '../event-manager'
-
-const $ = $Cypress.$
 
 interface BaseState {
   isLoading: boolean

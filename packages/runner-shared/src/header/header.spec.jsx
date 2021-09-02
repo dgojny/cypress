@@ -2,13 +2,11 @@ import _ from 'lodash'
 import React from 'react'
 import { mount, shallow } from 'enzyme'
 import sinon from 'sinon'
-import $Cypress from '@packages/driver'
 import Tooltip from '@cypress/react-tooltip'
 
 import { eventManager } from '../event-manager'
 import { Studio, studioRecorder } from '../studio'
 import { selectorPlaygroundModel } from '../selector-playground'
-import $ from 'jquery'
 import { Header } from '.'
 
 const getState = (props) => _.extend({
@@ -25,10 +23,7 @@ const propsWithState = (stateProps, configProps = {}) =>
 
 describe('<Header />', () => {
   beforeEach(() => {
-    $.returns({ outerHeight: () => 42 })
-
     sinon.stub(eventManager, 'emit')
-
     sinon.stub(studioRecorder, 'removeListeners')
     sinon.stub(studioRecorder, 'visitUrl')
   })
@@ -90,7 +85,7 @@ describe('<Header />', () => {
 
       mount(<Header {...props} />)
       selectorPlaygroundModel.isOpen = true
-      expect(props.state.updateWindowDimensions).to.be.calledWith({ headerHeight: 42 })
+      expect(props.state.updateWindowDimensions).to.be.called
     })
 
     it('does not show tooltip if selector playground is open', () => {
