@@ -37,7 +37,7 @@ const buildDir = function (platform, ...args) {
       // subfolder and it is NOT "darwin" but "mac"
       return path.resolve(root, 'mac', ...args)
     case 'linux':
-      return path.resolve(root, 'linux-unpacked', ...args)
+      return path.resolve(root, 'linux-arm64-unpacked', ...args)
     case 'win32':
       if (os.arch() === 'x64') {
         return path.resolve(root, 'win-unpacked', ...args)
