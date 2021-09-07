@@ -1797,7 +1797,7 @@ export default {
 
       if (t) {
         msg += `the remaining tests in the current suite: \`${_.truncate(t, {
-          length: 20,
+          length: 30,
         })}\``
       } else {
         msg += 'all of the remaining tests.'
